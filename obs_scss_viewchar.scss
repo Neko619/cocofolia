@@ -3,7 +3,7 @@
 }
 
 /* チャット欄 */
-#root > div > div.MuiDrawer-root.MuiDrawer-docked.sc-bBXxYQ.dpyOPx {
+#root > div > div.MuiDrawer-root.MuiDrawer-docked.sc-bBXxYQ.dpyOPx > div{
 	display: none;
 }
 
@@ -11,6 +11,8 @@
 #root > div > div.sc-kgUAyh.bQuPFq {
 	width: 100%;
 }
+
+
 
 #root > div > div.sc-kgUAyh.bQuPFq > div.sc-djvmMF.jQdwqQ > div > div > div > div {
 	// 配置固定 スクリーンパネルの無効化
