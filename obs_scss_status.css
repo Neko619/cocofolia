@@ -5,18 +5,29 @@ body {
   overflow: hidden;
 }
 
-/* 表面 */
-#root > div > div.MuiDrawer-root.MuiDrawer-docked.sc-bBXxYQ.dpyOPx {
+/* チャット欄 */
+#root > div > div.MuiDrawer-root.MuiDrawer-docked.sc-bBXxYQ.dpyOPx > div > div > div.MuiList-root.sc-jOrMOR.flHLrh > div:nth-child(1) > div > div > div {
   display: none;
+  height: auto !important;
+  min-height: auto !important;
+  width: auto !important;
+  position: static !important;
+  flex-shrink: 0;
+  margin: 10px;
 }
-#root > div > div.MuiDrawer-root.MuiDrawer-docked.sc-bBXxYQ.dpyOPx > *:nth-last-child(-n+3) {
-  display: block;
+#root > div > div.MuiDrawer-root.MuiDrawer-docked.sc-bBXxYQ.dpyOPx > div > div > div.MuiList-root.sc-jOrMOR.flHLrh > div:nth-child(1) > div > div > div *:nth-last-child(-n+3) {
+  display: block !important;
+}
+
+/* スクロールバー */
+::-webkit-scrollbar {
+  display: none !important;
 }
 
 #root > div > div.sc-kgUAyh.bQuPFq > div.sc-djvmMF.jQdwqQ > div > div,
 #root > div > div.sc-TRNrF.bXnBWt,
 #root > div > header {
-  display: none;
+  display: none !important;
 }
 
 /* 盤面 */
