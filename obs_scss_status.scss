@@ -5,11 +5,16 @@ body {
 }
 
 /* 表面 */
-#root>div>div.MuiDrawer-root.MuiDrawer-docked.sc-bBXxYQ.dpyOPx,
+#root>div>div.MuiDrawer-root.MuiDrawer-docked.sc-bBXxYQ.dpyOPx{
+  display: none;
+  > *:nth-last-child(-n+3) {display: block;}
+}
+
 #root>div>div.sc-kgUAyh.bQuPFq>div.sc-djvmMF.jQdwqQ>div>div,
 #root>div>div.sc-TRNrF.bXnBWt,
 #root>div>header {
   display: none;
+  
 }
 
 /* 盤面 */
