@@ -13,7 +13,7 @@ body {
   position: static !important;
   flex-shrink: 0;
   margin: 10px;
-  *:nth-last-child(-n+3) {display: block !important;}
+  > :nth-last-child(-n+3) {display: block !important;}
 }
 
 /* スクロールバー */
