@@ -1,42 +1,87 @@
+/* OBS */
 body {
   background-color: rgba(0, 0, 0, 0);
   margin: 0px auto;
   overflow: hidden;
 }
 
-/* チャット欄 */
-#root > div > div.MuiDrawer-root.MuiDrawer-docked.sc-bBXxYQ.dpyOPx > div > div > div.MuiList-root.sc-jOrMOR.flHLrh > div:nth-child(1) > div {
-  &::-webkit-scrollbar {
-    display: none !important;
-  }
- > div > div {
-    display: none;
-    height: auto !important;
-    min-height: auto !important;
-    width: auto !important;
-    position: static !important;
-    flex-shrink: 0;
-    margin: 10px;
-    &:nth-last-child(-n+3){
-      display: block !important;
-    }
-  }
-}
-
-
-#root>div>div.sc-kgUAyh.bQuPFq>div.sc-djvmMF.jQdwqQ>div>div,
-#root>div>div.sc-TRNrF.bXnBWt,
-#root>div>header {
-  display: none !important; 
-}
-
 /* 盤面 */
-#root>div>div.sc-kgUAyh.bQuPFq {
-  width: 100%;
+.sc-knuRna,
+/* 背景 */
+.sc-bWXABl,
+/* キャラ */
+.sc-ZyCDH,
+/* ヘッダー削除 */
+header,
+/* 音量 */
+.sc-caXVBt,
+/* 拡大縮小 */
+.sc-gVAlfg.cDMISq,
+/* 鉛筆ボタン */
+.sc-bGWzfD.eIoVGu,
+/* 監視モード */
+.MuiSnackbar-root,
+/* スクロールバー */
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* ステータス欄 */
+#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-hKpBwk.CawLz {
+
+  .sc-kngDgl {
+    top: 0;
+    padding: 0;
+  }
+
+  /* キャラアイコンを削除 */
+  .MuiBadge-root {
+    display: none;
+  }
+
+  /* 全て非表示にする */
+  /*
+  .sc-kngDgl > div {
+    display: none;
+  }
+  */
+
+  /* サイズ調整 */
+  .MuiTypography-body2 {
+    font-size: 2rem;
+  }
+
+    /* 横並び（200の倍数） */
+  .sc-iWajrY.bPXPQc
+  {
+    max-width: 600px;
+  }
+
+  .sc-hZFzCs.LzOyi {
+    height: 48px;
+    width: 200px;
+  }
+  
+  .sc-cHPgQl.gHLokd > div {
+    height: 48px;
+  }
+
+  .MuiTypography-body2 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* 特定のキャラだけ表示（1からスタート） */
+  /*
+  .sc-jmnVvD>div:nth-child(1) {
+    display: flex;
+  }
+  */
 }
 
 /* ポップアップ */
-#root>div>div.sc-kgUAyh.bQuPFq>div.MuiPaper-root.sc-djUGQo.hqkidh.MuiPaper-elevation1.MuiPaper-rounded {
+.sc-gGnURB.ihOmcc{
   min-height: 160px;
   max-width: 960px;
   opacity: 0.9 !important;
@@ -63,64 +108,21 @@ body {
     max-height: 1800px;
   }
 
-  .hUiEzw {
+  .sc-egNfGp.jduNjR {
     padding: 0px 24px 16px;
     height: initial;
     overflow-y: visible;
   }
-
+  
   /* アイコン */
-  >img {
+  > img {
     visibility: none;
     display: none;
   }
 
   /* ダイス */
-  >div>div.sc-edUIhV.cpRwfx>img {
-    height: 150px;
-    width: 150px;
-  }
-}
-
-
-#root>div>div.sc-kgUAyh.bQuPFq {
-
-  /**************************
-	　ステータス
-	**************************/
-  /* キャラアイコンを削除 */
-  .MuiBadge-root {
-    display: none;
-  }
-
-  /* サイズ調整 */
-  .MuiTypography-body2 {
-    font-size: 2rem;
-  }
-
-  .sc-hsOonA>div>div>div,
-  .sc-hsOonA>div>div>div>div:nth-child(2)>div {
-    height: 48px;
-  }
-
-  .sc-hsOonA>div>div>div {
-    width: 200px;
-  }
-
-  .MuiTypography-body2 {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-  }
-
-  /* 特定のキャラだけ表示（1からスタート） */
-  /*
-	.sc-hsOonA:nth-child(1) {
-	  display: flex;
-	}
-	*/
-  /* 横並び（200の倍数） */
-  .sc-fHsOPI {
-    max-width: 600px;
+  .sc-itUGML.fpJfOM > img {
+    height: 120px;
+    width: 120px;
   }
 }
