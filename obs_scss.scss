@@ -1,65 +1,71 @@
-#root > div > div.sc-kgUAyh.bQuPFq > div.MuiPaper-root{
-    background-color: rgba(0,0,0,0);
+body {
+	background-color: rgba(0, 0, 0, 0);
 }
 
 /* チャット欄 */
-#root>div>div.MuiDrawer-root.MuiDrawer-docked.sc-bBXxYQ.dpyOPx {
-  display: none;
+/* ポップアップ */
+.MuiPaper-elevation1,
+.MuiDrawer-root{
+	display: none;
 }
 
 /* 盤面 */
-#root > div > div.sc-kgUAyh.bQuPFq {
-  width: 100%;
+div[tabindex="0"] {
+  width: 100% !important;
 }
 
-// 
-#root>div>div.sc-kgUAyh.bQuPFq>div.sc-djvmMF.jQdwqQ>div>div>div>div {
 
-// 配置固定 スクリーンパネルの無効化
-	.sc-hTtwUo.bYSbUT>img {
+
+#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-fSUSjI.kQLuGe > div > div > div > div {
+	// 配置固定 スクリーンパネルの無効化
+	> div > div.sc-GVOUr.craUcb {
 		display: none;
 	}
+	// ドラッガブルスクリーンパネルの無効化
+	> div > div.sc-GVOUr.cSWuti {
+		// 特になし
+	}
 
-// キャラクター無効化
-	>figure {
-			display: none;
-		}
+	// キャラクター無効化
+	> figure {
+		display: none;
+	}
 }
 
-/* ポップアップ */
-#root > div > div.sc-kgUAyh.bQuPFq > div.MuiPaper-root.sc-djUGQo.hqkidh.MuiPaper-elevation1.MuiPaper-rounded {
-    display: none;
-}
 
 
-#root > div > div.sc-kgUAyh.bQuPFq {
-
+#root > div > div.sc-fbPSWO.dtsdOQ {
 	/**************************
 	　ステータス
 	**************************/
 	/* キャラアイコンを削除 */
 	.MuiBadge-root {
-	  display: none;
+	display: none;
+	}
+
+	/* 全て非表示にする */
+	.sc-jmnVvD > div {
+	display: none;
 	}
 
 	/* サイズ調整 */
 	.MuiTypography-body2 {
-	  font-size: 2rem;
+	font-size: 2rem;
 	}
 
-	.sc-hsOonA>div>div>div,
-	.sc-hsOonA>div>div>div>div:nth-child(2)>div {
-	  height: 48px;
+	.sc-jmnVvD>div>div>div>div,
+	.sc-jmnVvD>div>div>div>div>div:nth-child(2)>div {
+	height: 48px;
 	}
 
-	.sc-hsOonA>div>div>div {
-	  width: 200px;
+	.sc-jmnVvD>div>div>div>div {
+	width: 200px;
 	}
 
 	.MuiTypography-body2 {
-	  display: flex;
-	  align-items: center;
-	  padding: 10px;
+	display: flex;
+	align-items: center;
+	padding: 10px;
 	}
 
 	/* 特定のキャラだけ表示（1からスタート） */
@@ -69,8 +75,7 @@
 	}
 	*/
 	/* 横並び（200の倍数） */
-	.sc-fHsOPI {
-	  max-width: 600px;
+	.sc-jmnVvD>div>div>div {
+		max-width: 600px;
 	}
 }
-
