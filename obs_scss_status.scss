@@ -4,21 +4,28 @@ body {
   margin: 0px auto;
   overflow: hidden;
 }
-
+/* カットイン */
+div[open],
 /* 盤面 */
-.sc-knuRna,
-/* 背景 */
-.sc-bWXABl,
+div[tabindex="0"],
+/* 盤面 */
+div[tabindex="0"]>div:nth-child(1),
 /* キャラ */
-.sc-ZyCDH,
+.MuiButtonBase-root+div+div,
+.MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded+div,
+/* チャット */
+.MuiDrawer-root.MuiDrawer-docked,
+/* モーダル削除 */
+[role="presentation"],
 /* ヘッダー削除 */
-header,
+/* headerのみだとチャットのタブも消える */
+header>.MuiToolbar-gutters,
 /* 音量 */
-.sc-caXVBt,
+div[tabindex="0"]>div:nth-child(3),
 /* 拡大縮小 */
-.sc-gVAlfg.cDMISq,
+.MuiButtonBase-root+div,
 /* 鉛筆ボタン */
-.sc-bGWzfD.eIoVGu,
+.MuiButtonBase-root.MuiFab-root,
 /* 監視モード */
 .MuiSnackbar-root,
 /* スクロールバー */
@@ -26,62 +33,78 @@ header,
   display: none !important;
 }
 
-/* ステータス欄 */
-#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-hKpBwk.CawLz {
+/******************
+#root > div > div.sc-fbPSWO.dtsdOQ > div.MuiPaper-root.sc-gGnURB.ihOmcc.MuiPaper-elevation1.MuiPaper-rounded:not([style*="transform: none"]) {
+  position: relative;
+  animation: move-down 15s 5s forwards;
+}
 
-  .sc-kngDgl {
-    top: 0;
-    padding: 0;
-  }
+#root > div > div.sc-fbPSWO.dtsdOQ > div.MuiPaper-root.sc-gGnURB.ihOmcc.MuiPaper-elevation1.MuiPaper-rounded[style*="transform: none"] {
+  position: relative;
+  animation: move-top 15s 5s forwards;
+}
 
-  /* キャラアイコンを削除 */
-  .MuiBadge-root {
-    display: none;
+@keyframes move-top {
+  100% {
+    top: -100px;
+    opacity: 0;
   }
+}
 
-  /* 全て非表示にする */
-  /*
-  .sc-kngDgl > div {
-    display: none;
+@keyframes move-down {
+  100% {
+    top: 100px;
+    opacity: 0;
   }
-  */
+}
+**************/
+/**************************
+　ステータス
+**************************/
+/* 上下の調整 */
+.MuiButtonBase-root+div+div,
+.MuiPaper-rounded+div {
+  top: 0;
+  padding: 0;
+}
 
-  /* サイズ調整 */
-  .MuiTypography-body2 {
-    font-size: 2rem;
-  }
+/* キャラアイコンを削除 */
+.MuiBadge-root {
+  display: none;
+}
 
-    /* 横並び（200の倍数） */
-  .sc-iWajrY.bPXPQc
-  {
-    max-width: 600px;
-  }
+/* 全て非表示にする */
+.MuiButtonBase-root+div+div>div,
+.MuiPaper-rounded+div>div {
+  display: none;
+}
 
-  .sc-hZFzCs.LzOyi {
-    height: 48px;
-    width: 200px;
-  }
-  
-  .sc-cHPgQl.gHLokd > div {
-    height: 48px;
-  }
+/* サイズ調整 */
+.MuiTypography-body2 {
+  font-size: 2rem;
+}
 
-  .MuiTypography-body2 {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-  }
+.MuiButtonBase-root+div+div>div>div>div>div,
+.MuiButtonBase-root+div+div>div>div>div>div>div:nth-child(2)>div,
+.MuiPaper-rounded+div>div>div>div>div,
+.MuiPaper-rounded+div>div>div>div>div>div:nth-child(2)>div {
+  height: 48px;
+}
 
-  /* 特定のキャラだけ表示（1からスタート） */
-  /*
-  .sc-jmnVvD>div:nth-child(1) {
-    display: flex;
-  }
-  */
+/* margin分短くする */
+.MuiButtonBase-root+div+div>div>div>div>div,
+.MuiPaper-rounded+div>div>div>div>div {
+  width: 196px;
+}
+
+.MuiTypography-body2 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 
 /* ポップアップ */
-.sc-gGnURB.ihOmcc{
+.MuiPaper-root {
   min-height: 160px;
   max-width: 960px;
   opacity: 0.9 !important;
@@ -98,6 +121,9 @@ header,
     font-size: 1.6rem;
   }
 
+  .MuiToolbar-gutters {
+    padding: 12px 24px;
+  }
   /* ログの方 */
   .MuiTypography-body1 {
     font-size: 2rem;
@@ -113,16 +139,12 @@ header,
     height: initial;
     overflow-y: visible;
   }
-  
   /* アイコン */
-  > img {
-    visibility: none;
+  .MuiPaper-root>img {
     display: none;
   }
 
-  /* ダイス */
-  .sc-itUGML.fpJfOM > img {
-    height: 120px;
-    width: 120px;
+  .MuiPaper-root>img[src=""] {
+    display: none;
   }
 }

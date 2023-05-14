@@ -6,99 +6,129 @@ body {
   overflow: hidden;
 }
 
-/* 盤面 */
-.sc-knuRna,
-.sc-bWXABl,
-.sc-ZyCDH,
-header,
-.sc-caXVBt,
-.sc-gVAlfg.cDMISq,
-.sc-bGWzfD.eIoVGu,
+/* カットイン */
+div[open],
+div[tabindex="0"],
+div[tabindex="0"] > div:nth-child(1),
+.MuiButtonBase-root + div + div,
+.MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded + div,
+.MuiDrawer-root.MuiDrawer-docked,
+[role=presentation],
+header > .MuiToolbar-gutters,
+div[tabindex="0"] > div:nth-child(3),
+.MuiButtonBase-root + div,
+.MuiButtonBase-root.MuiFab-root,
 .MuiSnackbar-root,
 ::-webkit-scrollbar {
   display: none !important;
 }
 
-/* ステータス欄 */
-#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-hKpBwk.CawLz {
-  /* キャラアイコンを削除 */
-  /* 全て非表示にする */
-  /*
-  .sc-kngDgl > div {
-    display: none;
-  }
-  */
-  /* サイズ調整 */
-  /* 横並び（200の倍数） */
-  /* 特定のキャラだけ表示（1からスタート） */
-  /*
-  .sc-jmnVvD>div:nth-child(1) {
-    display: flex;
-  }
-  */
+/******************
+#root > div > div.sc-fbPSWO.dtsdOQ > div.MuiPaper-root.sc-gGnURB.ihOmcc.MuiPaper-elevation1.MuiPaper-rounded:not([style*="transform: none"]) {
+  position: relative;
+  animation: move-down 15s 5s forwards;
 }
-#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-hKpBwk.CawLz .sc-kngDgl {
+
+#root > div > div.sc-fbPSWO.dtsdOQ > div.MuiPaper-root.sc-gGnURB.ihOmcc.MuiPaper-elevation1.MuiPaper-rounded[style*="transform: none"] {
+  position: relative;
+  animation: move-top 15s 5s forwards;
+}
+
+@keyframes move-top {
+  100% {
+    top: -100px;
+    opacity: 0;
+  }
+}
+
+@keyframes move-down {
+  100% {
+    top: 100px;
+    opacity: 0;
+  }
+}
+**************/
+/**************************
+　ステータス
+**************************/
+/* 上下の調整 */
+.MuiButtonBase-root + div + div,
+.MuiPaper-rounded + div {
   top: 0;
   padding: 0;
 }
-#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-hKpBwk.CawLz .MuiBadge-root {
+
+/* キャラアイコンを削除 */
+.MuiBadge-root {
   display: none;
 }
-#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-hKpBwk.CawLz .MuiTypography-body2 {
+
+/* 全て非表示にする */
+.MuiButtonBase-root + div + div > div,
+.MuiPaper-rounded + div > div {
+  display: none;
+}
+
+/* サイズ調整 */
+.MuiTypography-body2 {
   font-size: 2rem;
 }
-#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-hKpBwk.CawLz .sc-iWajrY.bPXPQc {
-  max-width: 600px;
-}
-#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-hKpBwk.CawLz .sc-hZFzCs.LzOyi {
-  height: 48px;
-  width: 200px;
-}
-#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-hKpBwk.CawLz .sc-cHPgQl.gHLokd > div {
+
+.MuiButtonBase-root + div + div > div > div > div > div,
+.MuiButtonBase-root + div + div > div > div > div > div > div:nth-child(2) > div,
+.MuiPaper-rounded + div > div > div > div > div,
+.MuiPaper-rounded + div > div > div > div > div > div:nth-child(2) > div {
   height: 48px;
 }
-#root > div > div.sc-fbPSWO.dtsdOQ > div.sc-hKpBwk.CawLz .MuiTypography-body2 {
+
+/* margin分短くする */
+.MuiButtonBase-root + div + div > div > div > div > div,
+.MuiPaper-rounded + div > div > div > div > div {
+  width: 196px;
+}
+
+.MuiTypography-body2 {
   display: flex;
   align-items: center;
   padding: 10px;
 }
 
 /* ポップアップ */
-.sc-gGnURB.ihOmcc {
+.MuiPaper-root {
   min-height: 160px;
   max-width: 960px;
   opacity: 0.9 !important;
   /* タイトルの方 */
   /* ログの方 */
   /* アイコン */
-  /* ダイス */
 }
-.sc-gGnURB.ihOmcc > div {
+.MuiPaper-root > div {
   min-height: 160px;
   max-height: 960px;
   width: 960px !important;
 }
-.sc-gGnURB.ihOmcc .MuiTypography-subtitle2,
-.sc-gGnURB.ihOmcc .MuiTypography-body2 {
+.MuiPaper-root .MuiTypography-subtitle2,
+.MuiPaper-root .MuiTypography-body2 {
   font-size: 1.6rem;
 }
-.sc-gGnURB.ihOmcc .MuiTypography-body1 {
+.MuiPaper-root .MuiToolbar-gutters {
+  padding: 12px 24px;
+}
+.MuiPaper-root .MuiTypography-body1 {
   font-size: 2rem;
 }
-.sc-gGnURB.ihOmcc .MuiToolbar-root + div {
+.MuiPaper-root .MuiToolbar-root + div {
   min-height: 160px;
   max-height: 1800px;
 }
-.sc-gGnURB.ihOmcc .sc-egNfGp.jduNjR {
+.MuiPaper-root .sc-egNfGp.jduNjR {
   padding: 0px 24px 16px;
   height: initial;
   overflow-y: visible;
 }
-.sc-gGnURB.ihOmcc > img {
-  visibility: none;
+.MuiPaper-root .MuiPaper-root > img {
   display: none;
 }
-.sc-gGnURB.ihOmcc .sc-itUGML.fpJfOM > img {
-  height: 120px;
-  width: 120px;
+.MuiPaper-root .MuiPaper-root > img[src=""] {
+  display: none;
 }/*# sourceMappingURL=obs_scss_status.css.map */
